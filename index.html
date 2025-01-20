@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>Пазлы</title>
+	<style>
+		#content{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 1500px;
+			height: 725px;}
+		#taskbar{
+			float: left;
+			width: 425px;
+			height: 725px;
+			background-color: orange;}
+		#puzzles{
+			position: relative;
+			float: left;
+			width: 1075px;
+			height: 725px;
+			background-color: #E8F6FE;}
+		#tasks{
+			width: 375px;
+			height: 340px;
+			position: absolute;
+			background-color: orange;
+			top: 150px;
+			left: 25px;
+		}
+		button{
+			width: 375px;
+			height: 85px;
+		}
+		#b1{
+			background-image: url("G1.png");
+		}
+		#b2{
+			background-image: url("G2.png");
+		}
+		#b3{
+			background-image: url("G3.png");
+		}
+		#b4{
+			background-image: url("G4.png");
+		}
+	</style>
+	<script>
+		function t1(){
+			var answer = prompt("2-2?");
+			if (answer == "0"){
+				var imgCreate = document.getElementById("puzzles");
+				var img = document.createElement("img");
+				img.src = "blue.png";
+				img.style.position = "absolute";
+				img.style.top = "100px";
+				img.style.left = "400px";
+				puzzles.appendChild(img);
+			} else {
+				alert("Неправильный ответ");
+			}
+		}
+		function t2(){
+			var answer = prompt("6:3?");
+			if (answer == "2"){
+				var imgCreate = document.getElementById("puzzles");
+				var img = document.createElement("img");
+				img.src = "green.png";
+				img.style.position = "absolute";
+				img.style.top = "306px";
+				img.style.left = "400px";
+				puzzles.appendChild(img);
+			} else {
+				alert("Неправильный ответ");
+			}
+		}
+		function t3(){
+			var answer = prompt("9:3?");
+			if (answer == "3"){
+				var imgCreate = document.getElementById("puzzles");
+				var img = document.createElement("img");
+				img.src = "red.png";
+				img.style.position = "absolute";
+				img.style.top = "100px";
+				img.style.left = "605px";
+				puzzles.appendChild(img);
+			} else {
+				alert("Неправильный ответ");
+			}
+		}
+		function t4(){
+			var answer = prompt("4*4? ");
+			if (answer == "16"){
+				var imgCreate = document.getElementById("puzzles");
+				var img = document.createElement("img");
+				img.src = "yellow.png";
+				img.style.position = "absolute";
+				img.style.top = "306px";
+				img.style.left = "605px";
+				puzzles.appendChild(img);
+			} else {
+				alert("Неправильный ответ");
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id = "content">
+		<div id = "taskbar">
+			<div id = "tasks">
+				<button id = "b1" onclick = "t1()"></button>
+				<button id = "b2" onclick = "t2()"></button>
+				<button id = "b3" onclick = "t3()"></button>
+				<button id = "b4" onclick = "t4()"></button>
+			</div>
+		</div>
+		<div id = "puzzles">
+			
+		</div>
+	</div>
+</body>
+</html>
